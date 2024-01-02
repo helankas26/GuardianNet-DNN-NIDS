@@ -20,7 +20,7 @@ class Ui_signupForm(object):
         self.loginImage = QtWidgets.QLabel(parent=signupForm)
         self.loginImage.setGeometry(QtCore.QRect(0, 0, 435, 510))
         self.loginImage.setText("")
-        self.loginImage.setPixmap(QtGui.QPixmap("../../assert/signup.png"))
+        self.loginImage.setPixmap(QtGui.QPixmap("assert/signup.png"))
         self.loginImage.setScaledContents(True)
         self.loginImage.setObjectName("loginImage")
         self.frame = QtWidgets.QFrame(parent=signupForm)

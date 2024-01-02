@@ -44,7 +44,7 @@
     <string/>
    </property>
    <property name="pixmap">
-    <pixmap>../../assert/signup.png</pixmap>
+    <pixmap>assert/signup.png</pixmap>
    </property>
    <property name="scaledContents">
     <bool>true</bool>

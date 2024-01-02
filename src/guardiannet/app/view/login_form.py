@@ -20,7 +20,7 @@ class Ui_loginForm(object):
         self.loginImage = QtWidgets.QLabel(parent=loginForm)
         self.loginImage.setGeometry(QtCore.QRect(0, 0, 435, 510))
         self.loginImage.setText("")
-        self.loginImage.setPixmap(QtGui.QPixmap("../../assert/login.jpg"))
+        self.loginImage.setPixmap(QtGui.QPixmap("assert/login.jpg"))
         self.loginImage.setScaledContents(True)
         self.loginImage.setObjectName("loginImage")
         self.frame = QtWidgets.QFrame(parent=loginForm)
