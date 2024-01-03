@@ -16,9 +16,13 @@ class Ui_loginForm(object):
         loginForm.resize(870, 510)
         loginForm.setMinimumSize(QtCore.QSize(870, 510))
         loginForm.setMaximumSize(QtCore.QSize(870, 510))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("assert/logo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        loginForm.setWindowIcon(icon)
         loginForm.setStyleSheet("background: #EAEAEA;")
         self.loginImage = QtWidgets.QLabel(parent=loginForm)
         self.loginImage.setGeometry(QtCore.QRect(0, 0, 435, 510))
+        self.loginImage.setStyleSheet("")
         self.loginImage.setText("")
         self.loginImage.setPixmap(QtGui.QPixmap("assert/login.jpg"))
         self.loginImage.setScaledContents(True)
@@ -36,7 +40,7 @@ class Ui_loginForm(object):
         self.logo = QtWidgets.QLabel(parent=self.frame)
         self.logo.setGeometry(QtCore.QRect(110, 30, 116, 139))
         self.logo.setText("")
-        self.logo.setPixmap(QtGui.QPixmap("../../assert/logo.png"))
+        self.logo.setPixmap(QtGui.QPixmap("assert/logo.png"))
         self.logo.setScaledContents(True)
         self.logo.setObjectName("logo")
         self.name = QtWidgets.QLabel(parent=self.frame)
@@ -113,7 +117,7 @@ class Ui_loginForm(object):
 
     def retranslateUi(self, loginForm):
         _translate = QtCore.QCoreApplication.translate
-        loginForm.setWindowTitle(_translate("loginForm", "LoginForm"))
+        loginForm.setWindowTitle(_translate("loginForm", "Login"))
         self.name.setText(_translate("loginForm", "GuardiaNet"))
         self.txtUsername.setPlaceholderText(_translate("loginForm", "Username"))
         self.txtPassword.setPlaceholderText(_translate("loginForm", "Password"))

@@ -16,6 +16,9 @@ class Ui_signupForm(object):
         signupForm.resize(870, 510)
         signupForm.setMinimumSize(QtCore.QSize(870, 510))
         signupForm.setMaximumSize(QtCore.QSize(870, 510))
+        icon = QtGui.QIcon()
+        icon.addPixmap(QtGui.QPixmap("assert/logo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        signupForm.setWindowIcon(icon)
         signupForm.setStyleSheet("background: #EAEAEA;")
         self.loginImage = QtWidgets.QLabel(parent=signupForm)
         self.loginImage.setGeometry(QtCore.QRect(0, 0, 435, 510))
@@ -36,7 +39,7 @@ class Ui_signupForm(object):
         self.logo = QtWidgets.QLabel(parent=self.frame)
         self.logo.setGeometry(QtCore.QRect(110, 30, 116, 139))
         self.logo.setText("")
-        self.logo.setPixmap(QtGui.QPixmap("../../assert/logo.png"))
+        self.logo.setPixmap(QtGui.QPixmap("assert/logo.png"))
         self.logo.setScaledContents(True)
         self.logo.setObjectName("logo")
         self.name = QtWidgets.QLabel(parent=self.frame)
@@ -136,7 +139,7 @@ class Ui_signupForm(object):
 
     def retranslateUi(self, signupForm):
         _translate = QtCore.QCoreApplication.translate
-        signupForm.setWindowTitle(_translate("signupForm", "SignUpForm"))
+        signupForm.setWindowTitle(_translate("signupForm", "Signup"))
         self.name.setText(_translate("signupForm", "GuardiaNet"))
         self.txtUsername.setPlaceholderText(_translate("signupForm", "Username"))
         self.txtPassword.setPlaceholderText(_translate("signupForm", "Password"))
