@@ -1,8 +1,8 @@
 from PyQt6.QtCore import pyqtSlot
 from PyQt6.QtWidgets import QWidget, QMessageBox
-
+from src.guardiannet.app.controller import Dashboard
 from src.guardiannet.app.model import Users
-from src.guardiannet.app.util import PasswordManager, MongoDBManager
+from src.guardiannet.app.util import PasswordManager, MongoDBManager, WindowManager
 from src.guardiannet.app.view import Ui_loginForm
 
 
@@ -32,7 +32,7 @@ class Login(QWidget):
             MongoDBManager()
             user = Users.objects(username=username).first()
             if PasswordManager.verifyPassword(password, user.password):
-                print("login")
+                WindowManager.window = Dashboard()
             else:
                 QMessageBox.warning(self, 'Warning', 'Incorrect password!')
         except AttributeError as e:
