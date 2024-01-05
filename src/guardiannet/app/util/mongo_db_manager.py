@@ -14,7 +14,7 @@ class MongoDBManager:
         pass
 
     @classmethod
-    def doesDatabaseExists(cls):
+    def doesDatabaseExist(cls):
         client = MongoClient(cls.host, cls.port)
 
         existing_databases = client.list_database_names()
