@@ -1,15 +1,18 @@
 from datetime import datetime
+
 from pymongo import MongoClient
 
-from src.guardiannet.app.util import PasswordManager
+from src.guardiannet.app.util import PasswordManager, ConfigurationManager
 
 
 class SystemInitializer:
 
     @staticmethod
-    def initialize_system(username, password):
+    def initializeSystem(username, password):
         client = None
         user = None
+
+        ConfigurationManager.initializeConfiguration()
 
         try:
             client = MongoClient("localhost", 27017)
@@ -28,4 +31,4 @@ class SystemInitializer:
         finally:
             client.close()
 
-        return True if user is not None else False
+        return user is not None
