@@ -1,6 +1,7 @@
-from PyQt6.QtCore import QRect
+from PyQt6.QtCore import QRect, pyqtSlot
 from PyQt6.QtWidgets import QMainWindow, QStackedLayout
-from src.guardiannet.app.controller import Status
+
+from src.guardiannet.app.controller import Status, Settings
 from src.guardiannet.app.view import Ui_mainWindow
 
 
@@ -54,8 +55,9 @@ class Dashboard(QMainWindow):
         self.ui.btnStatus.clicked.connect(lambda: self.__addStackedLayoutWidgets(Status()))
         # self.ui.btnHistory.clicked.connect(lambda: self.__addStackedLayoutWidgets())
         # self.ui.btnScan.clicked.connect(lambda: self.__addStackedLayoutWidgets())
-        # self.ui.btnSettings.clicked.connect(lambda: self.__addStackedLayoutWidgets())
+        self.ui.btnSettings.clicked.connect(lambda: self.__addStackedLayoutWidgets(Settings()))
 
+    @pyqtSlot()
     def __addStackedLayoutWidgets(self, widget):
         self.stackedLayout.removeWidget(self.stackedLayout.currentWidget())
         self.stackedLayout.addWidget(widget)
@@ -77,5 +79,5 @@ class Dashboard(QMainWindow):
             # case Scan():
             #     self.ui.btnScan.setStyleSheet(self.__activeNavButton)
             #
-            # case Settings():
-            #     self.ui.btnSettings.setStyleSheet(self.__activeNavButton)
+            case Settings():
+                self.ui.btnSettings.setStyleSheet(self.__activeNavButton)
