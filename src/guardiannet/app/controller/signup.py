@@ -1,9 +1,10 @@
+from PyQt6.QtCore import pyqtSlot
 from PyQt6.QtWidgets import QWidget, QMessageBox
+
 from src.guardiannet.app.config import SystemInitializer
 from src.guardiannet.app.controller import Login
 from src.guardiannet.app.util import WindowManager
 from src.guardiannet.app.view import Ui_signupForm
-from PyQt6.QtCore import pyqtSlot
 
 
 class Signup(QWidget):
@@ -37,7 +38,7 @@ class Signup(QWidget):
                                       QMessageBox.StandardButton.Yes | QMessageBox.StandardButton.No)
 
         if answer == QMessageBox.StandardButton.Yes:
-            if SystemInitializer.initialize_system(username, password):
+            if SystemInitializer.initializeSystem(username, password):
                 WindowManager.window = Login()
             else:
                 QMessageBox.warning(self, 'Error', 'Error initializing system!')

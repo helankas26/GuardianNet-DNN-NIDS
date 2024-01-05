@@ -1,4 +1,5 @@
 from PyQt6.QtWidgets import QWidget
+
 from src.guardiannet.app.view import Ui_statusForm
 
 
