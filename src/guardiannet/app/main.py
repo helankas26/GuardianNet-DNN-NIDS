@@ -1,11 +1,13 @@
 import sys
+
 from PyQt6.QtWidgets import QApplication
+
 from src.guardiannet.app.controller import Login, Signup
-from src.guardiannet.app.util import MongoDBManager, WindowManager
+from src.guardiannet.app.util import MongoDBManager, WindowManager, ConfigurationManager
 
 
 def loadWindow():
-    if MongoDBManager.doesDatabaseExists():
+    if MongoDBManager.doesDatabaseExist() and ConfigurationManager().doesConfigurationExist():
         return Login()
     else:
         return Signup()
