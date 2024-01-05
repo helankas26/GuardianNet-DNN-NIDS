@@ -30,7 +30,7 @@
     <normaloff>../../assert/logo.png</normaloff>../../assert/logo.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">QWidget {
+   <string notr="true">#settingsForm {
 border-radius: 16px;
 background: #FFF;
 border: 1px solid #dddddd;
@@ -46,7 +46,7 @@ border: 1px solid #dddddd;
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QFrame {
+    <string notr="true">#changePasswordFrame {
 border-radius: 10px;
 background: #F6F6E7;
 border: 1px solid #dddddd;
@@ -93,10 +93,10 @@ border-color :transparent;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLineEdit {
+     <string notr="true">#txtPassword {
 	border-radius: 5px;
 	border: 1px solid #B7B7B7;
-	background: #D9D9D9;
+	background: #FFFFFF;
 	color: #000;
 	font-family: Inter;
 	font-size: 14px;
@@ -105,7 +105,7 @@ border-color :transparent;
 	line-height: normal;
 }
 
-QLineEdit::focus {
+#txtPassword::focus {
 	border: 1px solid #4383CD;
 }</string>
     </property>
@@ -214,10 +214,10 @@ border-color :transparent;
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QLineEdit {
+     <string notr="true">#txtConfirmPassword {
 	border-radius: 5px;
 	border: 1px solid #B7B7B7;
-	background: #D9D9D9;
+	background: #FFFFFF;
 	color: #000;
 	font-family: Inter;
 	font-size: 14px;
@@ -226,7 +226,7 @@ border-color :transparent;
 	line-height: normal;
 }
 
-QLineEdit::focus {
+#txtConfirmPassword::focus {
 	border: 1px solid #4383CD;
 }</string>
     </property>
@@ -251,7 +251,7 @@ QLineEdit::focus {
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QFrame {
+    <string notr="true">#configFrame {
 border-radius: 10px;
 background: #EFEAE7;
 border: 1px solid #dddddd;
@@ -388,28 +388,29 @@ QPushButton:pressed {
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QComboBox {
+     <string notr="true">#cmbBatchSize {
 	border: 1px solid #B7B7B7;
 	border-radius: 5px;
 	padding-left: 10px;
+	background: #FFFFFF;
 }
 
-QComboBox::drop-down {
+#cmbBatchSize::drop-down {
     border: 0px;
 }
 
-QComboBox::down-arrow {
+#cmbBatchSize::down-arrow {
     image: url(../../assert/comboBox_arrow.ico);
     width: 12px;
     height: 12px;
 	margin-right:15px;
 }
 
-QComboBox:on {
+#cmbBatchSize:on {
  	border: 1px solid #4383CD;
  }
 
-QComboBox QListView {
+#cmbBatchSize QListView {
 	font-size: 12px;
 	border:1px solid rgba(0,0,0,10%);
 	padding:5px;
@@ -418,16 +419,16 @@ QComboBox QListView {
 	border-radius: 0;
 }
 
-QComboBox QListView::item{
+#cmbBatchSize QListView::item{
 	padding-left:10px;
 	background-color:#FFFFFF;
 }
 
-QComboBox QListView::item:hover{
+#cmbBatchSize QListView::item:hover{
    background-color:#1e90ff;
 }
 
-QComboBox QListView::item:selected{
+#cmbBatchSize QListView::item:selected{
    background-color:#1e90ff;
 }</string>
     </property>
@@ -447,28 +448,29 @@ QComboBox QListView::item:selected{
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">QComboBox {
+     <string notr="true">#cmbNetworkInterface {
 	border: 1px solid #B7B7B7;
 	border-radius: 5px;
 	padding-left: 10px;
+	background: #FFFFFF;
 }
 
-QComboBox::drop-down {
+#cmbNetworkInterface::drop-down {
     border: 0px;
 }
 
-QComboBox::down-arrow {
+#cmbNetworkInterface::down-arrow {
     image: url(../../assert/comboBox_arrow.ico);
     width: 12px;
     height: 12px;
 	margin-right:15px;
 }
 
-QComboBox:on {
+#cmbNetworkInterface:on {
  	border: 1px solid #4383CD;
  }
 
-QComboBox QListView {
+#cmbNetworkInterface QListView {
 	font-size: 12px;
 	border:1px solid rgba(0,0,0,10%);
 	padding:5px;
@@ -477,16 +479,16 @@ QComboBox QListView {
 	border-radius: 0;
 }
 
-QComboBox QListView::item{
+#cmbNetworkInterface QListView::item{
 	padding-left:10px;
 	background-color:#FFFFFF;
 }
 
-QComboBox QListView::item:hover{
+#cmbNetworkInterface QListView::item:hover{
    background-color:#1e90ff;
 }
 
-QComboBox QListView::item:selected{
+#cmbNetworkInterface QListView::item:selected{
    background-color:#1e90ff;
 }</string>
     </property>
@@ -502,7 +504,7 @@ QComboBox QListView::item:selected{
     </rect>
    </property>
    <property name="styleSheet">
-    <string notr="true">QFrame {
+    <string notr="true">#settingLabelFrame {
 border-radius: 10px;
 background: #5380A0;
 border: 1px solid #dddddd;

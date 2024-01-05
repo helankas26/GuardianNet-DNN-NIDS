@@ -129,7 +129,7 @@ QPushButton:pressed {
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QLabel {
+       <string notr="true">#lblStatus {
 	font-family: Inter;
 	font-size: 16px;
 	font-style: normal;
@@ -211,7 +211,7 @@ QPushButton:pressed {
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QLabel {
+       <string notr="true">#lblHistory {
 	font-family: Inter;
 	font-size: 16px;
 	font-style: normal;
@@ -293,7 +293,7 @@ QPushButton:pressed {
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QLabel {
+       <string notr="true">#lblScan {
 	font-family: Inter;
 	font-size: 16px;
 	font-style: normal;
@@ -375,7 +375,7 @@ QPushButton:pressed {
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">QLabel {
+       <string notr="true">#lblSettings {
 	font-family: Inter;
 	font-size: 16px;
 	font-style: normal;
@@ -401,7 +401,7 @@ QPushButton:pressed {
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">QFrame {
+     <string notr="true">#mainFrame {
 border-radius: 16px;
 background: #FFF;
 border: 1px solid #dddddd;

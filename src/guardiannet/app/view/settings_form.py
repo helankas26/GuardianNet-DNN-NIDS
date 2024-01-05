@@ -18,14 +18,14 @@ class Ui_settingsForm(object):
         icon = QtGui.QIcon()
         icon.addPixmap(QtGui.QPixmap("assert/logo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         settingsForm.setWindowIcon(icon)
-        settingsForm.setStyleSheet("QWidget {\n"
+        settingsForm.setStyleSheet("#settingsForm {\n"
 "border-radius: 16px;\n"
 "background: #FFF;\n"
 "border: 1px solid #dddddd;\n"
 "}")
         self.changePasswordFrame = QtWidgets.QFrame(parent=settingsForm)
         self.changePasswordFrame.setGeometry(QtCore.QRect(10, 62, 970, 233))
-        self.changePasswordFrame.setStyleSheet("QFrame {\n"
+        self.changePasswordFrame.setStyleSheet("#changePasswordFrame {\n"
 "border-radius: 10px;\n"
 "background: #F6F6E7;\n"
 "border: 1px solid #dddddd;\n"
@@ -48,10 +48,10 @@ class Ui_settingsForm(object):
         self.lblChangePassword.setObjectName("lblChangePassword")
         self.txtPassword = QtWidgets.QLineEdit(parent=self.changePasswordFrame)
         self.txtPassword.setGeometry(QtCore.QRect(180, 60, 250, 27))
-        self.txtPassword.setStyleSheet("QLineEdit {\n"
+        self.txtPassword.setStyleSheet("#txtPassword {\n"
 "    border-radius: 5px;\n"
 "    border: 1px solid #B7B7B7;\n"
-"    background: #D9D9D9;\n"
+"    background: #FFFFFF;\n"
 "    color: #000;\n"
 "    font-family: Inter;\n"
 "    font-size: 14px;\n"
@@ -60,7 +60,7 @@ class Ui_settingsForm(object):
 "    line-height: normal;\n"
 "}\n"
 "\n"
-"QLineEdit::focus {\n"
+"#txtPassword::focus {\n"
 "    border: 1px solid #4383CD;\n"
 "}")
         self.txtPassword.setFrame(True)
@@ -114,10 +114,10 @@ class Ui_settingsForm(object):
         self.lblConfirmPassword.setObjectName("lblConfirmPassword")
         self.txtConfirmPassword = QtWidgets.QLineEdit(parent=self.changePasswordFrame)
         self.txtConfirmPassword.setGeometry(QtCore.QRect(180, 100, 250, 27))
-        self.txtConfirmPassword.setStyleSheet("QLineEdit {\n"
+        self.txtConfirmPassword.setStyleSheet("#txtConfirmPassword {\n"
 "    border-radius: 5px;\n"
 "    border: 1px solid #B7B7B7;\n"
-"    background: #D9D9D9;\n"
+"    background: #FFFFFF;\n"
 "    color: #000;\n"
 "    font-family: Inter;\n"
 "    font-size: 14px;\n"
@@ -126,7 +126,7 @@ class Ui_settingsForm(object):
 "    line-height: normal;\n"
 "}\n"
 "\n"
-"QLineEdit::focus {\n"
+"#txtConfirmPassword::focus {\n"
 "    border: 1px solid #4383CD;\n"
 "}")
         self.txtConfirmPassword.setFrame(True)
@@ -135,7 +135,7 @@ class Ui_settingsForm(object):
         self.txtConfirmPassword.setObjectName("txtConfirmPassword")
         self.configFrame = QtWidgets.QFrame(parent=settingsForm)
         self.configFrame.setGeometry(QtCore.QRect(10, 305, 970, 335))
-        self.configFrame.setStyleSheet("QFrame {\n"
+        self.configFrame.setStyleSheet("#configFrame {\n"
 "border-radius: 10px;\n"
 "background: #EFEAE7;\n"
 "border: 1px solid #dddddd;\n"
@@ -206,28 +206,29 @@ class Ui_settingsForm(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.cmbBatchSize.setFont(font)
-        self.cmbBatchSize.setStyleSheet("QComboBox {\n"
+        self.cmbBatchSize.setStyleSheet("#cmbBatchSize {\n"
 "    border: 1px solid #B7B7B7;\n"
 "    border-radius: 5px;\n"
 "    padding-left: 10px;\n"
+"    background: #FFFFFF;\n"
 "}\n"
 "\n"
-"QComboBox::drop-down {\n"
+"#cmbBatchSize::drop-down {\n"
 "    border: 0px;\n"
 "}\n"
 "\n"
-"QComboBox::down-arrow {\n"
+"#cmbBatchSize::down-arrow {\n"
 "    image: url(assert/comboBox_arrow.ico);\n"
 "    width: 12px;\n"
 "    height: 12px;\n"
 "    margin-right:15px;\n"
 "}\n"
 "\n"
-"QComboBox:on {\n"
+"#cmbBatchSize:on {\n"
 "     border: 1px solid #4383CD;\n"
 " }\n"
 "\n"
-"QComboBox QListView {\n"
+"#cmbBatchSize QListView {\n"
 "    font-size: 12px;\n"
 "    border:1px solid rgba(0,0,0,10%);\n"
 "    padding:5px;\n"
@@ -236,16 +237,16 @@ class Ui_settingsForm(object):
 "    border-radius: 0;\n"
 "}\n"
 "\n"
-"QComboBox QListView::item{\n"
+"#cmbBatchSize QListView::item{\n"
 "    padding-left:10px;\n"
 "    background-color:#FFFFFF;\n"
 "}\n"
 "\n"
-"QComboBox QListView::item:hover{\n"
+"#cmbBatchSize QListView::item:hover{\n"
 "   background-color:#1e90ff;\n"
 "}\n"
 "\n"
-"QComboBox QListView::item:selected{\n"
+"#cmbBatchSize QListView::item:selected{\n"
 "   background-color:#1e90ff;\n"
 "}")
         self.cmbBatchSize.setObjectName("cmbBatchSize")
@@ -254,28 +255,29 @@ class Ui_settingsForm(object):
         font = QtGui.QFont()
         font.setPointSize(10)
         self.cmbNetworkInterface.setFont(font)
-        self.cmbNetworkInterface.setStyleSheet("QComboBox {\n"
+        self.cmbNetworkInterface.setStyleSheet("#cmbNetworkInterface {\n"
 "    border: 1px solid #B7B7B7;\n"
 "    border-radius: 5px;\n"
 "    padding-left: 10px;\n"
+"    background: #FFFFFF;\n"
 "}\n"
 "\n"
-"QComboBox::drop-down {\n"
+"#cmbNetworkInterface::drop-down {\n"
 "    border: 0px;\n"
 "}\n"
 "\n"
-"QComboBox::down-arrow {\n"
+"#cmbNetworkInterface::down-arrow {\n"
 "    image: url(assert/comboBox_arrow.ico);\n"
 "    width: 12px;\n"
 "    height: 12px;\n"
 "    margin-right:15px;\n"
 "}\n"
 "\n"
-"QComboBox:on {\n"
+"#cmbNetworkInterface:on {\n"
 "     border: 1px solid #4383CD;\n"
 " }\n"
 "\n"
-"QComboBox QListView {\n"
+"#cmbNetworkInterface QListView {\n"
 "    font-size: 12px;\n"
 "    border:1px solid rgba(0,0,0,10%);\n"
 "    padding:5px;\n"
@@ -284,22 +286,22 @@ class Ui_settingsForm(object):
 "    border-radius: 0;\n"
 "}\n"
 "\n"
-"QComboBox QListView::item{\n"
+"#cmbNetworkInterface QListView::item{\n"
 "    padding-left:10px;\n"
 "    background-color:#FFFFFF;\n"
 "}\n"
 "\n"
-"QComboBox QListView::item:hover{\n"
+"#cmbNetworkInterface QListView::item:hover{\n"
 "   background-color:#1e90ff;\n"
 "}\n"
 "\n"
-"QComboBox QListView::item:selected{\n"
+"#cmbNetworkInterface QListView::item:selected{\n"
 "   background-color:#1e90ff;\n"
 "}")
         self.cmbNetworkInterface.setObjectName("cmbNetworkInterface")
         self.settingLabelFrame = QtWidgets.QFrame(parent=settingsForm)
         self.settingLabelFrame.setGeometry(QtCore.QRect(10, 10, 970, 42))
-        self.settingLabelFrame.setStyleSheet("QFrame {\n"
+        self.settingLabelFrame.setStyleSheet("#settingLabelFrame {\n"
 "border-radius: 10px;\n"
 "background: #5380A0;\n"
 "border: 1px solid #dddddd;\n"

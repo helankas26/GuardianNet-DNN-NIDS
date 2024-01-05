@@ -66,7 +66,7 @@ class Ui_mainWindow(object):
         self.btnStatus.setObjectName("btnStatus")
         self.lblStatus = QtWidgets.QLabel(parent=self.statusFrame)
         self.lblStatus.setGeometry(QtCore.QRect(50, 120, 51, 16))
-        self.lblStatus.setStyleSheet("QLabel {\n"
+        self.lblStatus.setStyleSheet("#lblStatus {\n"
 "    font-family: Inter;\n"
 "    font-size: 16px;\n"
 "    font-style: normal;\n"
@@ -106,7 +106,7 @@ class Ui_mainWindow(object):
         self.btnHistory.setObjectName("btnHistory")
         self.lblHistory = QtWidgets.QLabel(parent=self.historyFrame)
         self.lblHistory.setGeometry(QtCore.QRect(45, 120, 61, 21))
-        self.lblHistory.setStyleSheet("QLabel {\n"
+        self.lblHistory.setStyleSheet("#lblHistory {\n"
 "    font-family: Inter;\n"
 "    font-size: 16px;\n"
 "    font-style: normal;\n"
@@ -146,7 +146,7 @@ class Ui_mainWindow(object):
         self.btnScan.setObjectName("btnScan")
         self.lblScan = QtWidgets.QLabel(parent=self.scanFrame)
         self.lblScan.setGeometry(QtCore.QRect(50, 120, 41, 16))
-        self.lblScan.setStyleSheet("QLabel {\n"
+        self.lblScan.setStyleSheet("#lblScan {\n"
 "    font-family: Inter;\n"
 "    font-size: 16px;\n"
 "    font-style: normal;\n"
@@ -186,7 +186,7 @@ class Ui_mainWindow(object):
         self.btnSettings.setObjectName("btnSettings")
         self.lblSettings = QtWidgets.QLabel(parent=self.settingsFrame)
         self.lblSettings.setGeometry(QtCore.QRect(45, 120, 63, 21))
-        self.lblSettings.setStyleSheet("QLabel {\n"
+        self.lblSettings.setStyleSheet("#lblSettings {\n"
 "    font-family: Inter;\n"
 "    font-size: 16px;\n"
 "    font-style: normal;\n"
@@ -198,7 +198,7 @@ class Ui_mainWindow(object):
         self.lblSettings.setObjectName("lblSettings")
         self.mainFrame = QtWidgets.QFrame(parent=self.centralWidget)
         self.mainFrame.setGeometry(QtCore.QRect(190, 10, 990, 650))
-        self.mainFrame.setStyleSheet("QFrame {\n"
+        self.mainFrame.setStyleSheet("#mainFrame {\n"
 "border-radius: 16px;\n"
 "background: #FFF;\n"
 "border: 1px solid #dddddd;\n"
