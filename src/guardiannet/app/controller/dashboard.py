@@ -1,7 +1,8 @@
-from PyQt6.QtCore import QRect, pyqtSlot
+from PyQt6.QtCore import QRect, pyqtSlot, QThread
 from PyQt6.QtWidgets import QMainWindow, QStackedLayout
 
-from src.guardiannet.app.controller import Status, Settings
+from src.guardiannet.app.controller import Status, Settings, Scan
+from src.guardiannet.app.util import WindowManager, ScanWorker
 from src.guardiannet.app.view import Ui_mainWindow
 
 
@@ -41,6 +42,11 @@ class Dashboard(QMainWindow):
         self.__setupStackedLayout()
         self.__connectSignalsAndSlots()
 
+        self.scanWorker = ScanWorker()
+        self.workerThread = QThread()
+        WindowManager.scanWorker = self.scanWorker
+        WindowManager.workerThread = self.workerThread
+
         self.show()
 
     def __setupStackedLayout(self):
@@ -54,13 +60,21 @@ class Dashboard(QMainWindow):
     def __connectSignalsAndSlots(self):
         self.ui.btnStatus.clicked.connect(lambda: self.__addStackedLayoutWidgets(Status()))
         # self.ui.btnHistory.clicked.connect(lambda: self.__addStackedLayoutWidgets())
-        # self.ui.btnScan.clicked.connect(lambda: self.__addStackedLayoutWidgets())
+        self.ui.btnScan.clicked.connect(lambda: self.__addStackedLayoutWidgets(Scan()))
         self.ui.btnSettings.clicked.connect(lambda: self.__addStackedLayoutWidgets(Settings()))
 
     @pyqtSlot()
     def __addStackedLayoutWidgets(self, widget):
+        if isinstance(widget, Scan) and WindowManager.scan is not None:
+            self.stackedLayout.removeWidget(self.stackedLayout.currentWidget())
+            self.stackedLayout.addWidget(WindowManager.scan)
+            self.__changeNavButtonStyle(WindowManager.scan)
+
+            return
+
         self.stackedLayout.removeWidget(self.stackedLayout.currentWidget())
         self.stackedLayout.addWidget(widget)
+        # self.stackedLayout.setCurrentWidget(widget)  # no usage
         self.__changeNavButtonStyle(widget)
 
     def __changeNavButtonStyle(self, widget):
@@ -76,8 +90,8 @@ class Dashboard(QMainWindow):
             # case History():
             #     self.ui.btnHistory.setStyleSheet(self.__activeNavButton)
             #
-            # case Scan():
-            #     self.ui.btnScan.setStyleSheet(self.__activeNavButton)
-            #
+            case Scan():
+                self.ui.btnScan.setStyleSheet(self.__activeNavButton)
+
             case Settings():
                 self.ui.btnSettings.setStyleSheet(self.__activeNavButton)
