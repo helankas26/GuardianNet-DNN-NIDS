@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>historyItem</class>
+ <widget class="QWidget" name="historyItem">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>46</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Item</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../assert/logo.png</normaloff>../../assert/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#historyItem {
+border-radius: 16px;
+background-color: #FAFCFD;
+border: 1px solid #dddddd;
+}</string>
+  </property>
+  <widget class="QFrame" name="historyItemFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>950</width>
+     <height>46</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#historyItemFrame {
+border-radius: 16px;
+background-color: #FAFCFD;
+border: 1px solid #dddddd;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QPushButton" name="btnDelete">
+    <property name="geometry">
+     <rect>
+      <x>894</x>
+      <y>5</y>
+      <width>36</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color: #FFF;
+	background-color: #FFF;
+	border-radius: 5px;
+	border: 1px solid #E8E8E8;
+}
+
+QPushButton:pressed {
+	background-color: #EBEBEB;
+}</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../assert/delete_icon.png</normaloff>../../assert/delete_icon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnView">
+    <property name="geometry">
+     <rect>
+      <x>818</x>
+      <y>5</y>
+      <width>36</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color: #FFF;
+	background-color: #FFF;
+	border-radius: 5px;
+	border: 1px solid #E8E8E8;
+}
+
+QPushButton:pressed {
+	background-color: #EBEBEB;
+}</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../assert/view_icon.png</normaloff>../../assert/view_icon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>30</width>
+      <height>30</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnDownload">
+    <property name="geometry">
+     <rect>
+      <x>742</x>
+      <y>5</y>
+      <width>36</width>
+      <height>36</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color: #FFF;
+	background-color: #FFF;
+	border-radius: 5px;
+	border: 1px solid #E8E8E8;
+}
+
+QPushButton:pressed {
+	background-color: #EBEBEB;
+}</string>
+    </property>
+    <property name="icon">
+     <iconset>
+      <normaloff>../../assert/download_icon.png</normaloff>../../assert/download_icon.png</iconset>
+    </property>
+    <property name="iconSize">
+     <size>
+      <width>100</width>
+      <height>100</height>
+     </size>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblAttack">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>13</y>
+      <width>200</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#lblAttack {
+color: #000;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 450;
+line-height: normal;
+background-color: transparent;
+border-color :transparent;
+}</string>
+    </property>
+    <property name="text">
+     <string>Attack Label</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblDate">
+    <property name="geometry">
+     <rect>
+      <x>325</x>
+      <y>13</y>
+      <width>150</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#lblDate {
+color: #000;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 450;
+line-height: normal;
+background-color: transparent;
+border-color :transparent;
+}</string>
+    </property>
+    <property name="text">
+     <string>2024-01-07</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblTime">
+    <property name="geometry">
+     <rect>
+      <x>550</x>
+      <y>13</y>
+      <width>150</width>
+      <height>20</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">#lblTime {
+color: #000;
+font-family: Inter;
+font-size: 16px;
+font-style: normal;
+font-weight: 450;
+line-height: normal;
+background-color: transparent;
+border-color :transparent;
+}</string>
+    </property>
+    <property name="text">
+     <string>11:19:28</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

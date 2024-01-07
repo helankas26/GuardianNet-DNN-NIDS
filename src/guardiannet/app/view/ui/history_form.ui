@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>historyForm</class>
+ <widget class="QWidget" name="historyForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>990</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>990</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>990</width>
+    <height>650</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>History</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../assert/logo.png</normaloff>../../assert/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#historyForm {
+border-radius: 16px;
+background: #FFF;
+border: 1px solid #dddddd;
+}</string>
+  </property>
+  <widget class="QFrame" name="recordsFrame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>62</y>
+     <width>970</width>
+     <height>335</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#recordsFrame {
+border-radius: 10px;
+background: #D9DEE2;
+border: 1px solid #dddddd;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QListWidget" name="recordsListWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>970</width>
+      <height>335</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QListWidget {
+border-radius: 10px;
+background: #D9DEE2;
+border: 1px solid #dddddd;
+margin: 10px
+}</string>
+    </property>
+    <property name="verticalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+    <property name="horizontalScrollBarPolicy">
+     <enum>Qt::ScrollBarAlwaysOff</enum>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QFrame" name="detailFrame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>407</y>
+     <width>970</width>
+     <height>233</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#detailFrame {
+border-radius: 10px;
+background: #FFF;
+border: 1px solid #dddddd;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+  </widget>
+  <widget class="QFrame" name="historyLabelFrame">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>970</width>
+     <height>42</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#historyLabelFrame {
+border-radius: 10px;
+background: #5380A0;
+border: 1px solid #dddddd;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="lblHistory">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>101</width>
+      <height>42</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: #FFF;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
+background-color: transparent;
+border-color :transparent;
+}</string>
+    </property>
+    <property name="text">
+     <string>History</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
