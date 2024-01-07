@@ -19,7 +19,7 @@ class Scan(QWidget):
         self.dirname = None
 
         self.scanWorker = WindowManager.scanWorker
-        self.workerThread = WindowManager.workerThread
+        self.workerThread = WindowManager.scanWorkerThread
 
         self.__connectSignalsAndSlots()
 
