@@ -6,3 +6,4 @@ from .settings_form import Ui_settingsForm
 from .scan_form import Ui_scanForm
 from .history_form import Ui_historyForm
 from .history_item import Ui_historyItem
+from .alert import Ui_alertForm

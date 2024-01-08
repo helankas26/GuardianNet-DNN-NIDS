@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>alertForm</class>
+ <widget class="QWidget" name="alertForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Alert</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>../../assert/logo.png</normaloff>../../assert/logo.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#alertForm {
+border-radius: 16px;
+background: #555;
+border: 1px solid #dddddd;
+}</string>
+  </property>
+  <widget class="QFrame" name="alertFrame">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>500</width>
+     <height>400</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">#alertFrame {
+border-radius: 16px;
+background: #555;
+border: 1px solid #dddddd;
+}</string>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Raised</enum>
+   </property>
+   <widget class="QLabel" name="alertImg">
+    <property name="geometry">
+     <rect>
+      <x>200</x>
+      <y>50</y>
+      <width>100</width>
+      <height>100</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+	background-color: transparent;
+	border-color :transparent;
+}</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../../assert/warning.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>90</x>
+      <y>180</y>
+      <width>320</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: #FFF;
+font-family: Inter;
+font-size: 28px;
+font-style: normal;
+font-weight: 400;
+background-color: transparent;
+border-color :transparent;
+}</string>
+    </property>
+    <property name="text">
+     <string>Attack has been detected</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btnClose">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>175</x>
+      <y>310</y>
+      <width>150</width>
+      <height>35</height>
+     </rect>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+	color: #000;
+	background-color: #BCBCBC;
+	font-family: Inter;
+	font-size: 22px;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	border-radius: 8px;
+}
+
+QPushButton:pressed {
+	background-color: rgb(208, 208, 208);
+}</string>
+    </property>
+    <property name="text">
+     <string>Close</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="lblAttcak">
+    <property name="geometry">
+     <rect>
+      <x>125</x>
+      <y>225</y>
+      <width>250</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QLabel {
+color: #FE0000;
+font-family: Inter;
+font-size: 28px;
+font-style: normal;
+font-weight: 550;
+background-color: transparent;
+border-color :transparent;
+}</string>
+    </property>
+    <property name="text">
+     <string>DoS Slowhttptest</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
