@@ -1,6 +1,6 @@
 {
     "setting": {
-        "iface": "eth0",
+        "iface": null,
         "batchSize": 32
     },
     "comboBox": {

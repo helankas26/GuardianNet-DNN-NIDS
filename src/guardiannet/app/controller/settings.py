@@ -24,8 +24,12 @@ class Settings(QWidget):
         self.ui.cmbBatchSize.setCurrentText(str(config.get('setting').get('batchSize')))
 
         interfaces = NetworkInterfaceUtil.getNetworkInterfaces()
+        self.ui.cmbNetworkInterface.addItem("None", None)
         self.ui.cmbNetworkInterface.addItems(interfaces)
-        self.ui.cmbNetworkInterface.setCurrentText(config.get('setting').get('iface'))
+        if config.get('setting').get('iface') is None:
+            self.ui.cmbNetworkInterface.setCurrentText("None")
+        else:
+            self.ui.cmbNetworkInterface.setCurrentText(config.get('setting').get('iface'))
 
     def __connectSignalsAndSlots(self):
         self.ui.btnUpdatePassword.clicked.connect(self.__changePassword)
@@ -70,6 +74,10 @@ class Settings(QWidget):
 
         if answer == QMessageBox.StandardButton.Yes:
             config = ConfigurationManager.loadConfiguration()
-            config["setting"]["iface"] = self.ui.cmbNetworkInterface.currentText()
+            if self.ui.cmbNetworkInterface.currentText() == "None":
+                config["setting"]["iface"] = self.ui.cmbNetworkInterface.currentData()
+            else:
+                config["setting"]["iface"] = self.ui.cmbNetworkInterface.currentText()
+
             config["setting"]["batchSize"] = int(self.ui.cmbBatchSize.currentText())
             ConfigurationManager.updateConfiguration(config)
