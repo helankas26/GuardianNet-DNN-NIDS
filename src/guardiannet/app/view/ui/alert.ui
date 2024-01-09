@@ -153,6 +153,9 @@ border-color :transparent;
     <property name="text">
      <string>DoS Slowhttptest</string>
     </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
    </widget>
   </widget>
  </widget>
