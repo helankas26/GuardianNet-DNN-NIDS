@@ -16,7 +16,7 @@ class CICFlowMeter(Thread):
         while filename is not None:
             self.__convertPcapToCsv(filename)
 
-            filepath = f"../../../../temp/csv/{filename}.pcap_Flow.csv"
+            filepath = f"../../../temp/csv/{filename}.pcap_Flow.csv"
             if os.path.exists(filepath):
                 self.csv_queue.put(filename)
 
@@ -24,17 +24,17 @@ class CICFlowMeter(Thread):
 
     @staticmethod
     def __convertPcapToCsv(filename):
-        outputDir = f"../../../../temp/csv/"
-        filepath = f"../../../../temp/pcap/{filename}.pcap"
+        outputDir = f"../../../temp/csv/"
+        filepath = f"../../../temp/pcap/{filename}.pcap"
         command = None
 
         try:
             operating_system = platform.system()
 
             if operating_system == 'Windows':
-                command = f"util\\cicflowmeterutil\\bin\\cfm.bat {filepath} {outputDir}"
+                command = f"core\\util\\cicflowmeterutil\\bin\\cfm.bat {filepath} {outputDir}"
             elif operating_system == 'Linux':
-                command = f"./util/cicflowmeterutil/bin/cfm {filepath} {outputDir}"
+                command = f".core/util/cicflowmeterutil/bin/cfm {filepath} {outputDir}"
 
             subprocess.run(command, check=True, shell=True, text=True)
 
