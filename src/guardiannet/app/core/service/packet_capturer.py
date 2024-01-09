@@ -15,7 +15,7 @@ class PacketCapturer(Thread):
     def run(self):
         while True:
             packets = self.__capture()
-            filename = datetime.now().strftime("%Y_%m_%d_%H_%M_%S")
+            filename = datetime.now().strftime("%Y_%m_%d_%H_%M_%S_%f")
             PcapHandler.savePackets(packets, filename)
             self.pcap_queue.put(filename)
 
