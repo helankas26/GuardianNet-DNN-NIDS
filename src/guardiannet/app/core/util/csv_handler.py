@@ -4,7 +4,7 @@ import os
 class CsvHandler:
     @staticmethod
     def deleteCsv(filename):
-        filepath = f"../../../temp/csv/{filename}.csv"
+        filepath = f"../../../../temp/csv/{filename}.csv"
         if os.path.exists(filepath):
             try:
                 os.remove(filepath)
