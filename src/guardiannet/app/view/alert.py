@@ -83,6 +83,7 @@ class Ui_alertForm(object):
 "background-color: transparent;\n"
 "border-color :transparent;\n"
 "}")
+        self.lblAttcak.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.lblAttcak.setObjectName("lblAttcak")
 
         self.retranslateUi(alertForm)
