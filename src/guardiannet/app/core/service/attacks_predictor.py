@@ -5,15 +5,24 @@ import pandas as pd
 from sklearn.preprocessing import MinMaxScaler
 from tensorflow.keras.models import load_model
 
+from src.guardiannet.app.core.service import DetectionNotifier
+
 
 class AttacksPredictor(Process):
     def __init__(self, csv_queue):
         super(AttacksPredictor, self).__init__()
-        self.model = load_model("model/DNN_Model_nids.h5")
+        self.model = load_model("core/model/DNN_Model_nids.h5")
         self.csv_queue = csv_queue
         self.dataset = None
         self.selectedDataFrame = None
         self.prediction_queue = Queue()
+        self.filename_queue = Queue()
+
+        detectionNotifier = DetectionNotifier(self.prediction_queue, self.filename_queue)
+
+        detectionNotifier.start()
+
+        # detectionNotifier.join()
 
     def run(self):
         filename = self.csv_queue.get()
@@ -23,6 +32,7 @@ class AttacksPredictor(Process):
             predictions = self.__predict()
             self.prediction_queue.put(predictions)
 
+            self.filename_queue.put(filename)
             filename = self.csv_queue.get()
 
     def __predict(self):
@@ -39,7 +49,7 @@ class AttacksPredictor(Process):
         return predictionsResult
 
     def __loadDataset(self, filename):
-        filepath = f"../../../../temp/csv/{filename}.pcap_Flow.csv"
+        filepath = f"../../../temp/csv/{filename}.pcap_Flow.csv"
         self.dataset = pd.read_csv(filepath)
 
     def __preprocessing(self):
@@ -80,4 +90,5 @@ class AttacksPredictor(Process):
 
     def __scaleData(self):
         scaler = MinMaxScaler()
-        self.selectedDataFrame = pd.DataFrame(scaler.fit_transform(self.selectedDataFrame), columns=self.selectedDataFrame.columns)
+        self.selectedDataFrame = pd.DataFrame(scaler.fit_transform(self.selectedDataFrame),
+                                              columns=self.selectedDataFrame.columns)
