@@ -6,12 +6,12 @@ from scapy.utils import wrpcap, rdpcap
 class PcapHandler:
     @staticmethod
     def savePackets(packets, filename):
-        filepath = f"../../../../temp/pcap/{filename}.pcap"
+        filepath = f"../../../temp/pcap/{filename}.pcap"
         wrpcap(filepath, packets)
 
     @staticmethod
     def loadPackets(filename):
-        filepath = f"../../../../temp/pcap/{filename}.pcap"
+        filepath = f"../../../temp/pcap/{filename}.pcap"
         return rdpcap(filepath)
 
     @staticmethod
