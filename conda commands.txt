@@ -1,0 +1,31 @@
+conda create --name researchenv python=3.11
+conda env remove --name researchenv
+
+conda env list
+
+conda init
+
+conda activate researchenv
+conda deactivate
+
+conda install jupyter ipykernel
+jupyter kernelspec list
+python -m ipykernel install --user --name=researchenv
+jupyter kernelspec uninstall researchenv
+
+
+jupyter notebook
+
+conda install package-name
+pip install package-name
+
+conda list --export > requirements.txt
+conda install --file requirements.txt
+
+pip list
+pip freeze > requirements.txt
+pip install -r requirements.txt
+
+conda env export > environment.yml
+conda create --name researchenv --file requirements.txt
+conda env create -f environment.yml
