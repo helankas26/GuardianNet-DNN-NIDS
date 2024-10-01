@@ -4,11 +4,13 @@ from PyQt6.QtGui import QIcon, QAction
 from PyQt6.QtWidgets import QApplication, QSystemTrayIcon, QMenu
 
 from src.guardiannet.app.controller import Login, Signup
+from src.guardiannet.app.core import NIDSEngine
 from src.guardiannet.app.util import MongoDBManager, WindowManager, ConfigurationManager
 
 
 def loadWindow():
     if MongoDBManager.doesDatabaseExist() and ConfigurationManager().doesConfigurationExist():
+        NIDSEngine().start()
         return Login()
     else:
         return Signup()

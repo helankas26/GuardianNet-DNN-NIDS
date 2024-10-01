@@ -1,7 +1,7 @@
 {
     "setting": {
         "iface": null,
-        "batchSize": 128
+        "batchSize": 32
     },
     "comboBox": {
         "cmbBatchSize": [

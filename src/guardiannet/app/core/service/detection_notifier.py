@@ -36,12 +36,15 @@ class DetectionNotifier(Thread):
         while predictions is not None:
             higherCountAttack = self.__getAttackType(predictions)
 
-            if higherCountAttack == 0:
-                predictions = self.prediction_queue.get()
-                continue
+            # if higherCountAttack == 0:
+            #     print("attack label:", "BENIGN", "attack type:", higherCountAttack)
+            #     predictions = self.prediction_queue.get()
+            #     continue
 
             attackLabel = self.__getAttackLabel(higherCountAttack)
             self.__triggerAlert(higherCountAttack, attackLabel)
+
+            print("attack label:", attackLabel, "attack type:", higherCountAttack)
 
             predictions = self.prediction_queue.get()
 
@@ -69,6 +72,7 @@ class DetectionNotifier(Thread):
             app = QApplication(sys.argv)
             alert = Alert()
             alert.ui.lblAttcak.setText(attackLabel)
+            # alert.ui.lblAttcak.setText("DoS slowloris")
             sys.exit(app.exec())
 
 
